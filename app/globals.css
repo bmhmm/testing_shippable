@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --green: #164f3b;
+  --green-deep: #123f30;
+  --green-muted: #bed4a4;
+  --cream: #f4f1e7;
+  --yellow: #f5d84e;
+  --ink: #193e31;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--green);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+button, input { font: inherit; }
+a { color: inherit; }
+.page-shell {
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 0 clamp(24px, 7.2vw, 112px) 120px;
+  background: radial-gradient(ellipse at 79% 33%, rgba(69, 119, 76, .38), transparent 35%), var(--green);
+}
+.site-header {
+  height: 94px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(244, 241, 231, .17);
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  color: var(--cream);
+  font-family: 'Manrope', sans-serif;
+  font-size: 21px;
+  font-weight: 800;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+.brand-mark { color: var(--yellow); font-size: 25px; line-height: 1; }
+.header-note { color: rgba(244, 241, 231, .68); font-size: 13px; letter-spacing: .02em; }
+.hero {
+  width: min(1100px, 100%);
+  min-height: 545px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  align-items: center;
+  gap: clamp(40px, 8vw, 120px);
+  padding: 66px 0 62px;
+}
+.hero-copy { max-width: 520px; }
+.eyebrow, .section-kicker, .card-label, .card-footer, .step-number {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: .17em;
+}
+.eyebrow { display: flex; align-items: center; gap: 10px; color: var(--green-muted); }
+.eyebrow-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--yellow); }
+h1, .auth-modal h2 {
+  margin: 23px 0 19px;
+  font-family: 'Manrope', sans-serif;
+  font-size: clamp(48px, 6.2vw, 79px);
+  line-height: 1.04;
+  font-weight: 600;
+  letter-spacing: -.065em;
+}
+h1 span { color: var(--yellow); }
+.hero-description { max-width: 410px; color: rgba(244, 241, 231, .76); font-size: 16px; line-height: 1.8; }
+.text-link { display: inline-flex; align-items: center; gap: 12px; margin-top: 18px; color: var(--cream); font-size: 13px; font-weight: 600; text-decoration: none; }
+.text-link span { color: var(--yellow); font-size: 18px; transition: transform .2s ease; }
+.text-link:hover span { transform: translate(3px, -3px); }
+.garden-card {
+  position: relative;
+  width: min(100%, 390px);
+  min-height: 375px;
+  justify-self: center;
+  padding: 25px 28px 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, .35);
+  border-radius: 4px;
+  background: #e8ead3;
+  color: var(--ink);
+  box-shadow: 16px 20px 0 rgba(11, 54, 38, .2);
+  transform: rotate(2deg);
+}
+.card-topline, .card-footer { display: flex; align-items: center; justify-content: space-between; }
+.card-label, .card-footer { color: #54705b; font-size: 9px; letter-spacing: .14em; }
+.sun-icon { color: #d89c2c; font-size: 27px; line-height: 1; }
+.plant-art { position: relative; width: 176px; height: 198px; margin: 12px auto 0; }
+.plant-stem { position: absolute; left: 87px; top: 57px; width: 3px; height: 107px; border-radius: 5px; background: #527b4c; transform: rotate(-5deg); }
+.leaf { position: absolute; z-index: 1; width: 54px; height: 31px; border-radius: 95% 5% 95% 5%; background: #6c975c; }
+.leaf-one { top: 50px; left: 34px; transform: rotate(23deg); }
+.leaf-two { top: 76px; left: 88px; background: #88a76b; transform: rotate(-21deg) scaleX(-1); }
+.leaf-three { top: 102px; left: 31px; background: #86a568; transform: rotate(17deg); }
+.leaf-four { top: 26px; left: 83px; width: 42px; height: 25px; background: #769b5d; transform: rotate(-32deg) scaleX(-1); }
+.plant-pot { position: absolute; left: 48px; bottom: 4px; width: 83px; height: 44px; border-radius: 5px 5px 27px 27px; background: #d78961; clip-path: polygon(0 0, 100% 0, 85% 100%, 15% 100%); }
+.note-quote { margin: 0 0 22px; text-align: center; font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 700; letter-spacing: -.04em; }
+.card-footer { padding-top: 12px; border-top: 1px solid rgba(25, 62, 49, .16); }
+.card-footer span:last-child { color: #7c9b63; font-size: 16px; }
+.how-section { width: min(1100px, 100%); margin: 0 auto; padding-top: 23px; }
+.how-heading { display: flex; align-items: center; gap: 24px; margin-bottom: 23px; }
+.section-kicker { color: var(--green-muted); white-space: nowrap; }
+.section-line { width: 100%; height: 1px; background: rgba(244, 241, 231, .19); }
+.steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 38px; }
+.step { padding: 0 20px 0 0; }
+.step-number { color: var(--yellow); }
+.step h2 { margin: 9px 0 6px; font-family: 'Manrope', sans-serif; font-size: 17px; font-weight: 600; letter-spacing: -.03em; }
+.step p { max-width: 245px; margin: 0; color: rgba(244, 241, 231, .65); font-size: 12px; line-height: 1.7; }
+.account-actions {
+  position: fixed;
+  z-index: 5;
+  top: clamp(18px, 3.5vw, 38px);
+  right: clamp(18px, 4vw, 54px);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px;
+  border: 1px solid rgba(18, 63, 48, .1);
+  border-radius: 999px;
+  background: rgba(18, 63, 48, .8);
+  box-shadow: 0 8px 28px rgba(8, 34, 25, .23);
+  backdrop-filter: blur(12px);
+}
+.account-button {
+  min-height: 46px;
+  padding: 0 22px;
+  border: 0;
+  border-radius: 999px;
+  background: #d93025;
+  color: #fff;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  transition: background .2s ease, transform .2s ease;
+}
+.account-button:hover, .form-submit:hover { background: #b71c1c; transform: translateY(-2px); }
+.account-button:focus-visible, .text-link:focus-visible, .modal-close:focus-visible, .form-switch button:focus-visible, .form-submit:focus-visible { outline: 3px solid #fff; outline-offset: 3px; }
+.account-button-primary { padding-right: 19px; }
+.account-button-primary span { margin-left: 8px; font-size: 17px; }
+.modal-backdrop { position: fixed; z-index: 10; inset: 0; display: grid; place-items: center; padding: 20px; background: rgba(7, 29, 21, .7); backdrop-filter: blur(5px); }
+.auth-modal { position: relative; width: min(100%, 420px); padding: 37px; border-radius: 8px; background: var(--cream); color: var(--ink); box-shadow: 0 24px 80px rgba(0, 0, 0, .25); }
+.modal-close { position: absolute; top: 13px; right: 16px; width: 36px; height: 36px; border: 0; border-radius: 50%; background: transparent; color: var(--ink); cursor: pointer; font-size: 27px; }
+.modal-mark { color: #739653; font-size: 25px; }
+.modal-eyebrow { margin: 12px 0 0; color: #69815f; }
+.auth-modal h2 { margin: 11px 0 8px; font-size: 34px; letter-spacing: -.05em; }
+.modal-description { margin: 0 0 23px; color: #65746b; font-size: 13px; line-height: 1.6; }
+.auth-form { display: grid; gap: 9px; }
+.auth-form label { margin-top: 4px; font-size: 12px; font-weight: 700; }
+.auth-form input { width: 100%; height: 46px; padding: 0 13px; border: 1px solid #ccd4c5; border-radius: 4px; background: #fffef9; color: var(--ink); font-size: 13px; }
+.auth-form input:focus { outline: 2px solid #739653; outline-offset: 1px; }
+.form-submit { min-height: 47px; margin-top: 9px; border: 0; border-radius: 4px; background: var(--yellow); color: var(--ink); cursor: pointer; font-weight: 700; transition: background .2s ease, transform .2s ease; }
+.form-switch { margin: 17px 0 0; color: #65746b; text-align: center; font-size: 12px; }
+.form-switch button { padding: 0; border: 0; background: none; color: var(--ink); cursor: pointer; font-weight: 700; text-decoration: underline; }
+@media (max-width: 760px) {
+  .page-shell { padding: 0 24px 145px; }
+  .site-header { height: 76px; }
+  .header-note { font-size: 11px; }
+  .hero { min-height: auto; grid-template-columns: 1fr; gap: 38px; padding: 66px 0 58px; }
+  .hero-copy { max-width: 560px; }
+  h1 { max-width: 500px; font-size: clamp(52px, 12vw, 75px); }
+  .garden-card { width: min(90%, 390px); min-height: 350px; }
+  .plant-art { height: 178px; }
+  .how-section { padding-top: 0; }
+  .steps { gap: 20px; }
+}
+@media (max-width: 520px) {
+  .page-shell { padding-right: 20px; padding-left: 20px; }
+  .header-note { max-width: 115px; text-align: right; }
+  .hero { padding-top: 49px; }
+  .hero-description { font-size: 14px; }
+  .garden-card { width: 94%; }
+  .steps { grid-template-columns: 1fr; gap: 18px; }
+  .step { display: grid; grid-template-columns: 36px 1fr; column-gap: 10px; padding: 0; }
+  .step-number { grid-row: span 2; padding-top: 11px; }
+  .step h2 { margin-top: 5px; }
+  .step p { max-width: none; }
+  .account-actions { top: 14px; right: 14px; left: auto; justify-content: center; gap: 8px; }
+  .account-button { flex: 1; min-height: 44px; padding: 0 14px; }
+  .auth-modal { padding: 31px 24px 25px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; }
+}
